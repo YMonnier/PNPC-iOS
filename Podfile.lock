@@ -28,6 +28,7 @@ PODS:
   - GoogleToolboxForMac/NSData+zlib (2.1.1):
     - GoogleToolboxForMac/Defines (= 2.1.1)
   - Hero (0.3.6)
+  - IQKeyboardManagerSwift (4.0.10)
   - Moya (8.0.5):
     - Moya/Core (= 8.0.5)
   - Moya-ObjectMapper/Core (2.3.2):
@@ -72,6 +73,7 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Messaging
   - Hero (~> 0.3)
+  - IQKeyboardManagerSwift (= 4.0.10)
   - Moya-ObjectMapper/RxSwift
   - Moya/RxSwift
   - RxCocoa (~> 3.0)
@@ -88,6 +90,7 @@ SPEC CHECKSUMS:
   FirebaseMessaging: b45ff9ef5d932600d3f78ff43168e7c5707aa7dc
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   Hero: d3c6f4dd80cdcdbb339be64e57ae3b5c3ab9938c
+  IQKeyboardManagerSwift: 75ba21a23794a1e6b6fe6d9a267ea17f80e06771
   Moya: c37eec09a098ba9991b5a963b291fc5704bdb9ef
   Moya-ObjectMapper: 1b05f10bb69fb6c8750d497d2974c1c63c08c3a9
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
@@ -101,6 +104,6 @@ SPEC CHECKSUMS:
   RxRealmDataSources: a5fb0bbd4e5938ba8a776dfb7510150fd981c7a0
   RxSwift: f9de85ea20cd2f7716ee5409fc13523dc638e4e4
 
-PODFILE CHECKSUM: 83359aaafec43df956b7d57f94916266792deb31
+PODFILE CHECKSUM: a780f01d5daba486c660a27992d83512c324c178
 
 COCOAPODS: 1.2.1

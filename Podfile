@@ -19,6 +19,9 @@ target 'PNPC-iOS' do
   # Pods for PNPC-iOS
   rx_swift
   
+  # Keyboard Manager
+  pod 'IQKeyboardManagerSwift', '4.0.10'
+  
   # Animations/Transitions
   pod 'Hero', '~> 0.3'
 
