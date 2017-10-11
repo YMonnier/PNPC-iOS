@@ -1,16 +1,68 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AuthenticationViewController" customModule="PNPC_iOS" customModuleProvider="target">
+            <connections>
+                <outlet property="loginButton" destination="ll8-C6-Jgn" id="aCk-eL-Jc3"/>
+                <outlet property="nicknameField" destination="2Ng-zs-Iom" id="EUH-y8-sjL"/>
+                <outlet property="view" destination="WwP-0g-2Zg" id="2YQ-kr-AaC"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
+        <view contentMode="scaleToFill" id="WwP-0g-2Zg">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoginBackground" translatesAutoresizingMaskIntoConstraints="NO" id="M6A-ST-5rn">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a nickname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Ng-zs-Iom">
+                    <rect key="frame" x="16" y="544" width="343" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ll8-C6-Jgn">
+                    <rect key="frame" x="16" y="582" width="343" height="65"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="65" id="5wE-Uo-q1W"/>
+                    </constraints>
+                    <state key="normal" title="Login">
+                        <color key="titleColor" red="0.59209048750000004" green="0.59219515320000005" blue="0.59208387139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="2Ng-zs-Iom" firstAttribute="leading" secondItem="WwP-0g-2Zg" secondAttribute="leading" constant="16" id="3CE-s6-p4o"/>
+                <constraint firstItem="2Ng-zs-Iom" firstAttribute="leading" secondItem="ll8-C6-Jgn" secondAttribute="leading" id="5SN-7C-YgD"/>
+                <constraint firstAttribute="bottom" secondItem="M6A-ST-5rn" secondAttribute="bottom" id="96E-55-Y4u"/>
+                <constraint firstItem="ll8-C6-Jgn" firstAttribute="top" secondItem="2Ng-zs-Iom" secondAttribute="bottom" constant="8" symbolic="YES" id="ANf-12-KlT"/>
+                <constraint firstAttribute="trailing" secondItem="M6A-ST-5rn" secondAttribute="trailing" id="R07-8q-RAS"/>
+                <constraint firstItem="M6A-ST-5rn" firstAttribute="leading" secondItem="WwP-0g-2Zg" secondAttribute="leading" id="S0J-PR-Ndq"/>
+                <constraint firstItem="2Ng-zs-Iom" firstAttribute="trailing" secondItem="ll8-C6-Jgn" secondAttribute="trailing" id="hXz-zu-rCE"/>
+                <constraint firstItem="M6A-ST-5rn" firstAttribute="top" secondItem="WwP-0g-2Zg" secondAttribute="top" id="haL-OG-9Uo"/>
+                <constraint firstItem="M6A-ST-5rn" firstAttribute="centerX" secondItem="ll8-C6-Jgn" secondAttribute="centerX" id="i2G-DG-ITf"/>
+                <constraint firstAttribute="bottom" secondItem="ll8-C6-Jgn" secondAttribute="bottom" constant="20" id="nTH-Jh-mtc"/>
+            </constraints>
+            <point key="canvasLocation" x="157.5" y="33.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="LoginBackground" width="1705" height="2131"/>
+    </resources>
 </document>

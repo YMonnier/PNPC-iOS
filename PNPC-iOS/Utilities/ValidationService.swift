@@ -6,4 +6,8 @@
 //  Copyright © 2017 ymonnier. All rights reserved.
 //
 
-import Foundation
+public final class ValidationService {
+    public static func isValid(nickname: String) -> Bool {
+        return nickname.characters.count >= 8
+    }
+}

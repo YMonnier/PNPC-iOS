@@ -8,12 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		48F6428C1F8E7BCD002A225B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F6428B1F8E7BCD002A225B /* AppDelegate.swift */; };
-		48F6428E1F8E7BCD002A225B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F6428D1F8E7BCD002A225B /* ViewController.swift */; };
-		48F642911F8E7BCD002A225B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48F6428F1F8E7BCD002A225B /* Main.storyboard */; };
 		48F642931F8E7BCD002A225B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48F642921F8E7BCD002A225B /* Assets.xcassets */; };
 		48F642961F8E7BCD002A225B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48F642941F8E7BCD002A225B /* LaunchScreen.storyboard */; };
 		48F642A11F8E7BCD002A225B /* PNPC_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F642A01F8E7BCD002A225B /* PNPC_iOSTests.swift */; };
 		48F642AC1F8E7BCD002A225B /* PNPC_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F642AB1F8E7BCD002A225B /* PNPC_iOSUITests.swift */; };
+		48F642BE1F8E8819002A225B /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F642BD1F8E8819002A225B /* AuthenticationViewController.swift */; };
+		48F642C01F8E8879002A225B /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F642BF1F8E8879002A225B /* AuthenticationViewModel.swift */; };
+		48F642C31F8E8947002A225B /* AuthenticationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48F642C21F8E8947002A225B /* AuthenticationViewController.xib */; };
+		48F642C81F8E9419002A225B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F642C71F8E9419002A225B /* Coordinator.swift */; };
+		48F642CA1F8E9442002A225B /* RootViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F642C91F8E9442002A225B /* RootViewCoordinator.swift */; };
+		48F642CC1F8E94B5002A225B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F642CB1F8E94B5002A225B /* AppCoordinator.swift */; };
+		48F642CF1F8EB238002A225B /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F642CE1F8EB238002A225B /* ViewExtension.swift */; };
+		48F642D21F8EB6F5002A225B /* ValidationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F642D11F8EB6F5002A225B /* ValidationService.swift */; };
+		48F642D51F8EB98A002A225B /* PNPCService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F642D41F8EB98A002A225B /* PNPCService.swift */; };
 		55D7E4650198181385C6CBB2 /* Pods_PNPC_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FD7CE6468C19EF66C245467 /* Pods_PNPC_iOS.framework */; };
 		C17A8EA06350BF4E75D98FEB /* Pods_PNPC_iOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 499F27A216592123C2354397 /* Pods_PNPC_iOSUITests.framework */; };
 		F2DE446FDC0E2A114D1C869D /* Pods_PNPC_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38246F8E6B688A64B270FD03 /* Pods_PNPC_iOSTests.framework */; };
@@ -44,8 +51,6 @@
 		44FBF5EABDC9765CF34BFB29 /* Pods-PNPC-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PNPC-iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PNPC-iOSTests/Pods-PNPC-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		48F642881F8E7BCD002A225B /* PNPC-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PNPC-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		48F6428B1F8E7BCD002A225B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		48F6428D1F8E7BCD002A225B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		48F642901F8E7BCD002A225B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		48F642921F8E7BCD002A225B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		48F642951F8E7BCD002A225B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		48F642971F8E7BCD002A225B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -55,6 +60,15 @@
 		48F642A71F8E7BCD002A225B /* PNPC-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PNPC-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		48F642AB1F8E7BCD002A225B /* PNPC_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PNPC_iOSUITests.swift; sourceTree = "<group>"; };
 		48F642AD1F8E7BCD002A225B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48F642BD1F8E8819002A225B /* AuthenticationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthenticationViewController.swift; path = Features/Authentication/AuthenticationViewController.swift; sourceTree = "<group>"; };
+		48F642BF1F8E8879002A225B /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthenticationViewModel.swift; path = Features/Authentication/ViewModels/AuthenticationViewModel.swift; sourceTree = "<group>"; };
+		48F642C21F8E8947002A225B /* AuthenticationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AuthenticationViewController.xib; path = Features/Authentication/AuthenticationViewController.xib; sourceTree = "<group>"; };
+		48F642C71F8E9419002A225B /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Coordinator.swift; path = Coordinator/Coordinator.swift; sourceTree = "<group>"; };
+		48F642C91F8E9442002A225B /* RootViewCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RootViewCoordinator.swift; path = Coordinator/RootViewCoordinator.swift; sourceTree = "<group>"; };
+		48F642CB1F8E94B5002A225B /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		48F642CE1F8EB238002A225B /* ViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewExtension.swift; path = Extensions/ViewExtension.swift; sourceTree = "<group>"; };
+		48F642D11F8EB6F5002A225B /* ValidationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ValidationService.swift; path = Utilities/ValidationService.swift; sourceTree = "<group>"; };
+		48F642D41F8EB98A002A225B /* PNPCService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PNPCService.swift; path = Utilities/Network/PNPCService.swift; sourceTree = "<group>"; };
 		499F27A216592123C2354397 /* Pods_PNPC_iOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PNPC_iOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78159117F3A5A005A4153BC8 /* Pods-PNPC-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PNPC-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PNPC-iOS/Pods-PNPC-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		8FD7CE6468C19EF66C245467 /* Pods_PNPC_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PNPC_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,9 +141,12 @@
 		48F6428A1F8E7BCD002A225B /* PNPC-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				48F642D01F8EB6B9002A225B /* Utilities */,
+				48F642CD1F8EB21E002A225B /* Extensions */,
+				48F642C61F8E93EF002A225B /* Coordinator */,
+				48F642B91F8E876D002A225B /* Features */,
 				48F6428B1F8E7BCD002A225B /* AppDelegate.swift */,
-				48F6428D1F8E7BCD002A225B /* ViewController.swift */,
-				48F6428F1F8E7BCD002A225B /* Main.storyboard */,
+				48F642CB1F8E94B5002A225B /* AppCoordinator.swift */,
 				48F642921F8E7BCD002A225B /* Assets.xcassets */,
 				48F642941F8E7BCD002A225B /* LaunchScreen.storyboard */,
 				48F642971F8E7BCD002A225B /* Info.plist */,
@@ -153,6 +170,74 @@
 				48F642AD1F8E7BCD002A225B /* Info.plist */,
 			);
 			path = "PNPC-iOSUITests";
+			sourceTree = "<group>";
+		};
+		48F642B91F8E876D002A225B /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				48F642BA1F8E8799002A225B /* Authentication */,
+			);
+			name = Features;
+			sourceTree = "<group>";
+		};
+		48F642BA1F8E8799002A225B /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				48F642BC1F8E87FF002A225B /* ViewModels */,
+				48F642BB1F8E87B6002A225B /* Coordinator */,
+				48F642BD1F8E8819002A225B /* AuthenticationViewController.swift */,
+				48F642C21F8E8947002A225B /* AuthenticationViewController.xib */,
+			);
+			name = Authentication;
+			sourceTree = "<group>";
+		};
+		48F642BB1F8E87B6002A225B /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Coordinator;
+			sourceTree = "<group>";
+		};
+		48F642BC1F8E87FF002A225B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				48F642BF1F8E8879002A225B /* AuthenticationViewModel.swift */,
+			);
+			name = ViewModels;
+			sourceTree = "<group>";
+		};
+		48F642C61F8E93EF002A225B /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				48F642C71F8E9419002A225B /* Coordinator.swift */,
+				48F642C91F8E9442002A225B /* RootViewCoordinator.swift */,
+			);
+			name = Coordinator;
+			sourceTree = "<group>";
+		};
+		48F642CD1F8EB21E002A225B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				48F642CE1F8EB238002A225B /* ViewExtension.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		48F642D01F8EB6B9002A225B /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				48F642D31F8EB93F002A225B /* Network */,
+				48F642D11F8EB6F5002A225B /* ValidationService.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		48F642D31F8EB93F002A225B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				48F642D41F8EB98A002A225B /* PNPCService.swift */,
+			);
+			name = Network;
 			sourceTree = "<group>";
 		};
 		AA2BE15EDE8592981E09A740 /* Frameworks */ = {
@@ -284,9 +369,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48F642C31F8E8947002A225B /* AuthenticationViewController.xib in Resources */,
 				48F642961F8E7BCD002A225B /* LaunchScreen.storyboard in Resources */,
 				48F642931F8E7BCD002A225B /* Assets.xcassets in Resources */,
-				48F642911F8E7BCD002A225B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,7 +534,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48F6428E1F8E7BCD002A225B /* ViewController.swift in Sources */,
+				48F642CC1F8E94B5002A225B /* AppCoordinator.swift in Sources */,
+				48F642C81F8E9419002A225B /* Coordinator.swift in Sources */,
+				48F642C01F8E8879002A225B /* AuthenticationViewModel.swift in Sources */,
+				48F642CF1F8EB238002A225B /* ViewExtension.swift in Sources */,
+				48F642BE1F8E8819002A225B /* AuthenticationViewController.swift in Sources */,
+				48F642D51F8EB98A002A225B /* PNPCService.swift in Sources */,
+				48F642CA1F8E9442002A225B /* RootViewCoordinator.swift in Sources */,
+				48F642D21F8EB6F5002A225B /* ValidationService.swift in Sources */,
 				48F6428C1F8E7BCD002A225B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -486,14 +578,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		48F6428F1F8E7BCD002A225B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				48F642901F8E7BCD002A225B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		48F642941F8E7BCD002A225B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -707,6 +791,7 @@
 				48F642B21F8E7BCD002A225B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		48F642B31F8E7BCD002A225B /* Build configuration list for PBXNativeTarget "PNPC-iOSTests" */ = {
 			isa = XCConfigurationList;
@@ -715,6 +800,7 @@
 				48F642B51F8E7BCD002A225B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		48F642B61F8E7BCD002A225B /* Build configuration list for PBXNativeTarget "PNPC-iOSUITests" */ = {
 			isa = XCConfigurationList;
@@ -723,6 +809,7 @@
 				48F642B81F8E7BCD002A225B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
