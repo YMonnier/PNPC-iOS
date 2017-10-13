@@ -8,7 +8,7 @@
 
 import RxCocoa
 import RxSwift
-
+import Moya
 
 public final class AuthenticationModelView {
     /// Sending new elements trough this property
@@ -17,17 +17,46 @@ public final class AuthenticationModelView {
 
     /// Sending new elements trough this property
     /// starts Login HTTP request.
-    var loginTaps = Variable<Void>()
+    var loginTap = Variable<Void>()
 
     /// Is login button enabled
     let signupEnabled: Observable<Bool>
     
+    /// Response HTTP
+    var response: Observable<Any>?
+    
+    // Network Provider
+    let provider = RxMoyaProvider<PNPCService>()
+    
     public init() {
-        signupEnabled = nicknameText.asObservable()
+        let nickname = nicknameText.asObservable()
+        signupEnabled = nickname
             .distinctUntilChanged()
             .throttle(0.3, scheduler: MainScheduler.instance)
             .map { s in
                 return ValidationService.isValid(nickname: s)
             }.shareReplay(1)
+        
+        response = loginTap.asObservable()
+            .withLatestFrom(nickname)
+            .flatMap { (nn) in
+                //self.provider.request(.login(nickname: nn))
+                self.provider.request(.joke)
+            }.mapJSON().shareReplay(1)
+        
+        
+        
+        
+        /*provider.request(.login(nickname: "zedzed")).subscribe { event in
+            switch event {
+            case .next(let response):
+                
+                break
+            // do something with the data
+            case .error(let error):
+                break
+                // handle the error
+            }
+        }*/
     }
 }

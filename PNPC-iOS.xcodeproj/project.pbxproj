@@ -141,10 +141,10 @@
 		48F6428A1F8E7BCD002A225B /* PNPC-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				48F642B91F8E876D002A225B /* Features */,
+				48F642C61F8E93EF002A225B /* Coordinator */,
 				48F642D01F8EB6B9002A225B /* Utilities */,
 				48F642CD1F8EB21E002A225B /* Extensions */,
-				48F642C61F8E93EF002A225B /* Coordinator */,
-				48F642B91F8E876D002A225B /* Features */,
 				48F6428B1F8E7BCD002A225B /* AppDelegate.swift */,
 				48F642CB1F8E94B5002A225B /* AppCoordinator.swift */,
 				48F642921F8E7BCD002A225B /* Assets.xcassets */,

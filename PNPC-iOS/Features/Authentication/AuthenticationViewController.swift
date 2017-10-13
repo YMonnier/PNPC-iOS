@@ -11,6 +11,10 @@ import UIKit
 import RxCocoa
 import RxSwift
 
+public protocol AuthenticationControllerDelegate: class {
+    func AuthenticationLoginIn()
+}
+
 public final class AuthenticationViewController: UIViewController {
     // MARK: @IBOutlet
     @IBOutlet weak var nicknameField: UITextField!
@@ -21,6 +25,9 @@ public final class AuthenticationViewController: UIViewController {
     
     // Keep the View and Model updated.
     private let viewModel: AuthenticationModelView
+    
+    /// Coordinator Delegate
+    public weak var delegate: AuthenticationControllerDelegate?
     
     // MARK: Setup
     override public func viewDidLoad() {
@@ -41,18 +48,50 @@ public final class AuthenticationViewController: UIViewController {
     
     
     private func addBindsTo(viewModel: AuthenticationModelView) {
-        nicknameField.rx.text.orEmpty.asObservable()
+        print(#function)
+        
+        nicknameField.rx.text.orEmpty
             .bind(to: viewModel.nicknameText)
+            .disposed(by: disposeBag)
+        
+        loginButton.rx.tap
+            .bind(to: viewModel.loginTap)
             .disposed(by: disposeBag)
         
         viewModel.signupEnabled
             .subscribe(onNext: { [weak self] valid  in
+                print(valid)
                 self?.loginButton.isEnabled = valid
                 self?.loginButton.alpha = valid ? 1.0 : 0.5
-            })
-            .disposed(by: disposeBag)
-
+            }).disposed(by: disposeBag)
         
+        /*viewModel.response?
+            .subscribe(onNext: { [weak self] json in
+                print(json)
+            }).disposed(by: disposeBag)*/
+        
+        
+        viewModel.response?.subscribe { event in
+            print("Event: \(event)")
+            switch event {
+            
+            case .next(let response):
+                print("Response... \(response)")
+                delegate?.AuthenticationLoginIn()
+                /*if let jsonOpt = try? response.mapJSON() {
+                    print("JSON... \(jsonOpt)")
+                }*/
+                break
+            // do something with the data
+            case .error(let error):
+                print(error)
+                break
+            case .completed:
+                print("completed...")
+                break
+                // handle the error
+            }
+        }.disposed(by: disposeBag)
     }
-
+    
 }
