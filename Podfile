@@ -29,6 +29,9 @@ target 'PNPC-iOS' do
   pod 'Firebase/Core'
   pod 'Firebase/Messaging'
 
+  # Estimote SDK
+  # Does not work (https://github.com/Estimote/iOS-SDK/issues/269)
+  # pod 'EstimoteSDK', '5.0.0-alpha.2'
 
   target 'PNPC-iOSTests' do
     inherit! :search_paths
