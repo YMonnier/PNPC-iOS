@@ -10,33 +10,34 @@ import Moya
 
 enum PNPCService {
     case login(nickname: String)
+    case joke
 }
 
 extension PNPCService: TargetType {
-    var baseURL: URL { return URL(string: "https://api.myservice.com")! }
+    var baseURL: URL { return URL(string: "https://api.icndb.com")! }
     var path: String {
         switch self {
-        case .login:
-            return "/login"
+        case .login: return "/login"
+        case .joke: return "/jokes/random/"
         }
     }
     var method: Moya.Method {
         switch self {
-        case .login:
-            return .post
+        case .login: return .post
+        case .joke: return .get
         }
     }
     
     var parameters: [String: Any]? {
         switch self {
-        case .login(let nickname):
-            return ["nickname": nickname]
+        case .login(let nickname): return ["nickname": nickname]
+        case .joke: return nil
         }
     }
     
     var parameterEncoding: ParameterEncoding {
         switch self {
-        case .login:
+        case .login, .joke:
             // Send parameters as JSON in request body
             return JSONEncoding.default
         }
@@ -44,7 +45,7 @@ extension PNPCService: TargetType {
     
     var task: Task {
         switch self {
-        case .login: // Always send parameters as JSON in request body
+        case .login, .joke: // Always send parameters as JSON in request body
             return .request
         }
     }
