@@ -77,7 +77,7 @@ public final class AuthenticationViewController: UIViewController {
             
             case .next(let response):
                 print("Response... \(response)")
-                delegate?.AuthenticationLoginIn()
+                self.delegate?.AuthenticationLoginIn()
                 /*if let jsonOpt = try? response.mapJSON() {
                     print("JSON... \(jsonOpt)")
                 }*/
