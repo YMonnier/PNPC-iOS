@@ -10,6 +10,11 @@
 		4804C0FA1F916B80007768A5 /* EstimoteSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4804C0F91F916B80007768A5 /* EstimoteSDK.framework */; };
 		4804C0FC1F916D27007768A5 /* AppDelegate+Estimote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4804C0FB1F916D27007768A5 /* AppDelegate+Estimote.swift */; };
 		48D1D5891FB5AD1F0045CA11 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 48D1D5881FB5AD1F0045CA11 /* Podfile */; };
+		48D1D58D1FB5B5690045CA11 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D1D58C1FB5B5690045CA11 /* MapViewController.swift */; };
+		48D1D58F1FB5B5800045CA11 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D1D58E1FB5B5800045CA11 /* MapViewModel.swift */; };
+		48D1D5911FB5B5E40045CA11 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48D1D5901FB5B5E40045CA11 /* MapViewController.xib */; };
+		48D1D5931FB5BA060045CA11 /* MapCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D1D5921FB5BA060045CA11 /* MapCoordinator.swift */; };
+		48D1D5951FB5BC6D0045CA11 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48D1D5941FB5BC6D0045CA11 /* MapKit.framework */; };
 		48F6428C1F8E7BCD002A225B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F6428B1F8E7BCD002A225B /* AppDelegate.swift */; };
 		48F642931F8E7BCD002A225B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48F642921F8E7BCD002A225B /* Assets.xcassets */; };
 		48F642961F8E7BCD002A225B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48F642941F8E7BCD002A225B /* LaunchScreen.storyboard */; };
@@ -56,6 +61,11 @@
 		4804C0F91F916B80007768A5 /* EstimoteSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EstimoteSDK.framework; sourceTree = "<group>"; };
 		4804C0FB1F916D27007768A5 /* AppDelegate+Estimote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Estimote.swift"; sourceTree = "<group>"; };
 		48D1D5881FB5AD1F0045CA11 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
+		48D1D58C1FB5B5690045CA11 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = Features/Map/MapViewController.swift; sourceTree = "<group>"; };
+		48D1D58E1FB5B5800045CA11 /* MapViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewModel.swift; path = Features/Map/ViewModels/MapViewModel.swift; sourceTree = "<group>"; };
+		48D1D5901FB5B5E40045CA11 /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MapViewController.xib; path = Features/Map/MapViewController.xib; sourceTree = "<group>"; };
+		48D1D5921FB5BA060045CA11 /* MapCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapCoordinator.swift; path = Features/Map/MapCoordinator.swift; sourceTree = "<group>"; };
+		48D1D5941FB5BC6D0045CA11 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		48F642881F8E7BCD002A225B /* PNPC-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PNPC-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		48F6428B1F8E7BCD002A225B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48F642921F8E7BCD002A225B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -87,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48D1D5951FB5BC6D0045CA11 /* MapKit.framework in Frameworks */,
 				55D7E4650198181385C6CBB2 /* Pods_PNPC_iOS.framework in Frameworks */,
 				4804C0FA1F916B80007768A5 /* EstimoteSDK.framework in Frameworks */,
 			);
@@ -132,6 +143,25 @@
 			name = Estimote;
 			sourceTree = "<group>";
 		};
+		48D1D58A1FB5B5470045CA11 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				48D1D58B1FB5B5500045CA11 /* ViewModels */,
+				48D1D58C1FB5B5690045CA11 /* MapViewController.swift */,
+				48D1D5921FB5BA060045CA11 /* MapCoordinator.swift */,
+				48D1D5901FB5B5E40045CA11 /* MapViewController.xib */,
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
+		48D1D58B1FB5B5500045CA11 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				48D1D58E1FB5B5800045CA11 /* MapViewModel.swift */,
+			);
+			name = ViewModels;
+			sourceTree = "<group>";
+		};
 		48F6427F1F8E7BCD002A225B = {
 			isa = PBXGroup;
 			children = (
@@ -157,13 +187,13 @@
 		48F6428A1F8E7BCD002A225B /* PNPC-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				48F6428B1F8E7BCD002A225B /* AppDelegate.swift */,
+				4804C0FB1F916D27007768A5 /* AppDelegate+Estimote.swift */,
+				48F642CB1F8E94B5002A225B /* AppCoordinator.swift */,
 				48F642B91F8E876D002A225B /* Features */,
 				48F642C61F8E93EF002A225B /* Coordinator */,
 				48F642D01F8EB6B9002A225B /* Utilities */,
 				48F642CD1F8EB21E002A225B /* Extensions */,
-				48F6428B1F8E7BCD002A225B /* AppDelegate.swift */,
-				4804C0FB1F916D27007768A5 /* AppDelegate+Estimote.swift */,
-				48F642CB1F8E94B5002A225B /* AppCoordinator.swift */,
 				48F642921F8E7BCD002A225B /* Assets.xcassets */,
 				48F642941F8E7BCD002A225B /* LaunchScreen.storyboard */,
 				48D1D5881FB5AD1F0045CA11 /* Podfile */,
@@ -194,6 +224,7 @@
 		48F642B91F8E876D002A225B /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				48D1D58A1FB5B5470045CA11 /* Map */,
 				48F642BA1F8E8799002A225B /* Authentication */,
 			);
 			name = Features;
@@ -203,18 +234,10 @@
 			isa = PBXGroup;
 			children = (
 				48F642BC1F8E87FF002A225B /* ViewModels */,
-				48F642BB1F8E87B6002A225B /* Coordinator */,
 				48F642BD1F8E8819002A225B /* AuthenticationViewController.swift */,
 				48F642C21F8E8947002A225B /* AuthenticationViewController.xib */,
 			);
 			name = Authentication;
-			sourceTree = "<group>";
-		};
-		48F642BB1F8E87B6002A225B /* Coordinator */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Coordinator;
 			sourceTree = "<group>";
 		};
 		48F642BC1F8E87FF002A225B /* ViewModels */ = {
@@ -263,6 +286,7 @@
 		AA2BE15EDE8592981E09A740 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				48D1D5941FB5BC6D0045CA11 /* MapKit.framework */,
 				8FD7CE6468C19EF66C245467 /* Pods_PNPC_iOS.framework */,
 				38246F8E6B688A64B270FD03 /* Pods_PNPC_iOSTests.framework */,
 				499F27A216592123C2354397 /* Pods_PNPC_iOSUITests.framework */,
@@ -397,6 +421,7 @@
 				48F642C31F8E8947002A225B /* AuthenticationViewController.xib in Resources */,
 				48F642961F8E7BCD002A225B /* LaunchScreen.storyboard in Resources */,
 				48D1D5891FB5AD1F0045CA11 /* Podfile in Resources */,
+				48D1D5911FB5B5E40045CA11 /* MapViewController.xib in Resources */,
 				48F642931F8E7BCD002A225B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -560,6 +585,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48D1D58D1FB5B5690045CA11 /* MapViewController.swift in Sources */,
 				48F642CC1F8E94B5002A225B /* AppCoordinator.swift in Sources */,
 				48F642C81F8E9419002A225B /* Coordinator.swift in Sources */,
 				48F642C01F8E8879002A225B /* AuthenticationViewModel.swift in Sources */,
@@ -568,8 +594,10 @@
 				48F642D51F8EB98A002A225B /* PNPCService.swift in Sources */,
 				4804C0FC1F916D27007768A5 /* AppDelegate+Estimote.swift in Sources */,
 				48F642CA1F8E9442002A225B /* RootViewCoordinator.swift in Sources */,
+				48D1D5931FB5BA060045CA11 /* MapCoordinator.swift in Sources */,
 				48F642D21F8EB6F5002A225B /* ValidationService.swift in Sources */,
 				48F6428C1F8E7BCD002A225B /* AppDelegate.swift in Sources */,
+				48D1D58F1FB5B5800045CA11 /* MapViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

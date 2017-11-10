@@ -44,8 +44,8 @@ public final class AppCoordinator: RootViewCoordinator {
     /// Create View Model and inject it to the view controller.
     private func showLoginViewController() {
         let viewModel = AuthenticationModelView()
-        
         let viewController = AuthenticationViewController(viewModel: viewModel)
+        viewController.delegate = self
         navigationController.viewControllers = [viewController]
     }
 }
@@ -53,5 +53,17 @@ public final class AppCoordinator: RootViewCoordinator {
 extension AppCoordinator: AuthenticationControllerDelegate {
     public func authenticationLoginIn() {
         
+        let mapCoordinator = MapCoordinator()
+        mapCoordinator.delegate = self
+        mapCoordinator.start()
+        self.addChildCoordinator(mapCoordinator)
+        self.rootViewController.present(mapCoordinator.rootViewController, animated: true, completion: nil)
+    }
+}
+
+extension AppCoordinator: MapCoordinatorDelegate {
+    func logout(mapCoordinator: MapCoordinator) {
+        mapCoordinator.rootViewController.dismiss(animated: true)
+        self.removeChildCoordinator(mapCoordinator)
     }
 }
