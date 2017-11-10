@@ -51,7 +51,7 @@ public final class AppCoordinator: RootViewCoordinator {
 }
 
 extension AppCoordinator: AuthenticationControllerDelegate {
-    public func AuthenticationLoginIn() {
+    public func authenticationLoginIn() {
         
     }
 }

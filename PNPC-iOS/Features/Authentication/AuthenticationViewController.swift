@@ -12,7 +12,7 @@ import RxCocoa
 import RxSwift
 
 public protocol AuthenticationControllerDelegate: class {
-    func AuthenticationLoginIn()
+    func authenticationLoginIn()
 }
 
 public final class AuthenticationViewController: UIViewController {
@@ -82,7 +82,7 @@ public final class AuthenticationViewController: UIViewController {
             
             case .next(let response):
                 print("Response... \(response)")
-                self.delegate?.AuthenticationLoginIn()
+                self.delegate?.authenticationLoginIn()
                 /*if let jsonOpt = try? response.mapJSON() {
                     print("JSON... \(jsonOpt)")
                 }*/
