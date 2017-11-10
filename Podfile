@@ -19,6 +19,9 @@ target 'PNPC-iOS' do
   # Pods for PNPC-iOS
   rx_swift
   
+  # Keyboard Manager
+  pod 'IQKeyboardManagerSwift', '4.0.10'
+  
   # Animations/Transitions
   pod 'Hero', '~> 0.3'
 
@@ -26,6 +29,9 @@ target 'PNPC-iOS' do
   pod 'Firebase/Core'
   pod 'Firebase/Messaging'
 
+  # Estimote SDK
+  # Does not work (https://github.com/Estimote/iOS-SDK/issues/269)
+  # pod 'EstimoteSDK', '5.0.0-alpha.2'
 
   target 'PNPC-iOSTests' do
     inherit! :search_paths

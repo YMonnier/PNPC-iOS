@@ -1,4 +1,3 @@
-
 # Created by https://www.gitignore.io/api/macos,swift,xcode,cocoapods
 
 ### CocoaPods ###
@@ -113,4 +112,8 @@ fastlane/test_output
 /*.gcno
 **.~
 **~
+<<<<<<< HEAD
 # End of https://www.gitignore.io/api/macos,swift,xcode,cocoapods
+=======
+# End of https://www.gitignore.io/api/macos,swift,xcode,cocoapods⏎
+>>>>>>> master
