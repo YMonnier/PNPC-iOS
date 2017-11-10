@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="loginButton" destination="ll8-C6-Jgn" id="aCk-eL-Jc3"/>
                 <outlet property="nicknameField" destination="2Ng-zs-Iom" id="EUH-y8-sjL"/>
+                <outlet property="passwordField" destination="YK4-vY-2hb" id="KdA-5N-52t"/>
                 <outlet property="view" destination="WwP-0g-2Zg" id="2YQ-kr-AaC"/>
             </connections>
         </placeholder>
@@ -24,7 +25,7 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoginBackground" translatesAutoresizingMaskIntoConstraints="NO" id="M6A-ST-5rn">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 </imageView>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a nickname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Ng-zs-Iom">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mot de passe" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YK4-vY-2hb">
                     <rect key="frame" x="16" y="544" width="343" height="30"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -37,7 +38,7 @@
                         <constraint firstAttribute="height" constant="65" id="5wE-Uo-q1W"/>
                     </constraints>
                     <state key="normal" title="Login">
-                        <color key="titleColor" red="0.59209048750000004" green="0.59219515320000005" blue="0.59208387139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleColor" red="0.19135570630536475" green="0.1932503172588832" blue="0.1932503172588832" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -45,13 +46,23 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pseudo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Ng-zs-Iom">
+                    <rect key="frame" x="16" y="506" width="343" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert"/>
+                </textField>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="YK4-vY-2hb" secondAttribute="trailing" constant="16" id="1RI-sZ-IU5"/>
                 <constraint firstItem="2Ng-zs-Iom" firstAttribute="leading" secondItem="WwP-0g-2Zg" secondAttribute="leading" constant="16" id="3CE-s6-p4o"/>
+                <constraint firstItem="ll8-C6-Jgn" firstAttribute="top" secondItem="YK4-vY-2hb" secondAttribute="bottom" constant="8" id="3h6-rH-UMJ"/>
                 <constraint firstItem="2Ng-zs-Iom" firstAttribute="leading" secondItem="ll8-C6-Jgn" secondAttribute="leading" id="5SN-7C-YgD"/>
                 <constraint firstAttribute="bottom" secondItem="M6A-ST-5rn" secondAttribute="bottom" id="96E-55-Y4u"/>
-                <constraint firstItem="ll8-C6-Jgn" firstAttribute="top" secondItem="2Ng-zs-Iom" secondAttribute="bottom" constant="8" symbolic="YES" id="ANf-12-KlT"/>
+                <constraint firstItem="ll8-C6-Jgn" firstAttribute="top" secondItem="2Ng-zs-Iom" secondAttribute="bottom" constant="46" id="ANf-12-KlT"/>
+                <constraint firstItem="YK4-vY-2hb" firstAttribute="leading" secondItem="WwP-0g-2Zg" secondAttribute="leading" constant="16" id="Jo9-fK-qlN"/>
+                <constraint firstItem="YK4-vY-2hb" firstAttribute="top" secondItem="2Ng-zs-Iom" secondAttribute="bottom" constant="8" id="KId-6l-S71"/>
                 <constraint firstAttribute="trailing" secondItem="M6A-ST-5rn" secondAttribute="trailing" id="R07-8q-RAS"/>
                 <constraint firstItem="M6A-ST-5rn" firstAttribute="leading" secondItem="WwP-0g-2Zg" secondAttribute="leading" id="S0J-PR-Ndq"/>
                 <constraint firstItem="2Ng-zs-Iom" firstAttribute="trailing" secondItem="ll8-C6-Jgn" secondAttribute="trailing" id="hXz-zu-rCE"/>

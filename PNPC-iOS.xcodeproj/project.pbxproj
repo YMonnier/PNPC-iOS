@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4804C0FA1F916B80007768A5 /* EstimoteSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4804C0F91F916B80007768A5 /* EstimoteSDK.framework */; };
 		4804C0FC1F916D27007768A5 /* AppDelegate+Estimote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4804C0FB1F916D27007768A5 /* AppDelegate+Estimote.swift */; };
+		48D1D5891FB5AD1F0045CA11 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 48D1D5881FB5AD1F0045CA11 /* Podfile */; };
 		48F6428C1F8E7BCD002A225B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F6428B1F8E7BCD002A225B /* AppDelegate.swift */; };
 		48F642931F8E7BCD002A225B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48F642921F8E7BCD002A225B /* Assets.xcassets */; };
 		48F642961F8E7BCD002A225B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48F642941F8E7BCD002A225B /* LaunchScreen.storyboard */; };
@@ -54,6 +55,7 @@
 		4804C0F61F915E19007768A5 /* ObjCBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCBridge.h; sourceTree = "<group>"; };
 		4804C0F91F916B80007768A5 /* EstimoteSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EstimoteSDK.framework; sourceTree = "<group>"; };
 		4804C0FB1F916D27007768A5 /* AppDelegate+Estimote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Estimote.swift"; sourceTree = "<group>"; };
+		48D1D5881FB5AD1F0045CA11 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
 		48F642881F8E7BCD002A225B /* PNPC-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PNPC-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		48F6428B1F8E7BCD002A225B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48F642921F8E7BCD002A225B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				48F642CB1F8E94B5002A225B /* AppCoordinator.swift */,
 				48F642921F8E7BCD002A225B /* Assets.xcassets */,
 				48F642941F8E7BCD002A225B /* LaunchScreen.storyboard */,
+				48D1D5881FB5AD1F0045CA11 /* Podfile */,
 				48F642971F8E7BCD002A225B /* Info.plist */,
 				4804C0F61F915E19007768A5 /* ObjCBridge.h */,
 			);
@@ -393,6 +396,7 @@
 			files = (
 				48F642C31F8E8947002A225B /* AuthenticationViewController.xib in Resources */,
 				48F642961F8E7BCD002A225B /* LaunchScreen.storyboard in Resources */,
+				48D1D5891FB5AD1F0045CA11 /* Podfile in Resources */,
 				48F642931F8E7BCD002A225B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

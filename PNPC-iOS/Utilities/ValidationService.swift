@@ -10,4 +10,8 @@ public final class ValidationService {
     public static func isValid(nickname: String) -> Bool {
         return nickname.characters.count >= 8
     }
+    
+    public static func isValid(password: String) -> Bool {
+        return password.characters.count >= 8
+    }
 }

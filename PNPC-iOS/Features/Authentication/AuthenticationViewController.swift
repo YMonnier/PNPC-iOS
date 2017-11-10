@@ -18,6 +18,7 @@ public protocol AuthenticationControllerDelegate: class {
 public final class AuthenticationViewController: UIViewController {
     // MARK: @IBOutlet
     @IBOutlet weak var nicknameField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     
     // MARK: Variable
@@ -52,6 +53,10 @@ public final class AuthenticationViewController: UIViewController {
         
         nicknameField.rx.text.orEmpty
             .bind(to: viewModel.nicknameText)
+            .disposed(by: disposeBag)
+        
+        passwordField.rx.text.orEmpty
+            .bind(to: viewModel.passwordText)
             .disposed(by: disposeBag)
         
         loginButton.rx.tap

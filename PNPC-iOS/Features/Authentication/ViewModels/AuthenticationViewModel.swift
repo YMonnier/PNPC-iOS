@@ -14,6 +14,10 @@ public final class AuthenticationModelView {
     /// Sending new elements trough this property
     /// starts checking email validation.
     var nicknameText = Variable<String>("")
+    
+    /// Sending new elements trough this property
+    /// starts checking email validation.
+    var passwordText = Variable<String>("")
 
     /// Sending new elements trough this property
     /// starts Login HTTP request.
@@ -30,12 +34,23 @@ public final class AuthenticationModelView {
     
     public init() {
         let nickname = nicknameText.asObservable()
-        signupEnabled = nickname
+        let password = passwordText.asObservable()
+        
+        let validateNickname = nickname
             .distinctUntilChanged()
             .throttle(0.3, scheduler: MainScheduler.instance)
             .map { s in
                 return ValidationService.isValid(nickname: s)
             }.shareReplay(1)
+        
+        let validatePassword = password
+            .distinctUntilChanged()
+            .throttle(0.3, scheduler: MainScheduler.instance)
+            .map { s in
+                return ValidationService.isValid(nickname: s)
+            }.shareReplay(1)
+        
+        signupEnabled = Observable.combineLatest(validateNickname, validatePassword) { $0 && $1 }
         
         response = loginTap.asObservable()
             .withLatestFrom(nickname)
@@ -43,9 +58,6 @@ public final class AuthenticationModelView {
                 //self.provider.request(.login(nickname: nn))
                 self.provider.request(.joke)
             }.mapJSON().shareReplay(1)
-        
-        
-        
         
         /*provider.request(.login(nickname: "zedzed")).subscribe { event in
             switch event {
