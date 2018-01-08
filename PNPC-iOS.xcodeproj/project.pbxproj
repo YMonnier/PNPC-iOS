@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4804C0FA1F916B80007768A5 /* EstimoteSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4804C0F91F916B80007768A5 /* EstimoteSDK.framework */; };
 		4804C0FC1F916D27007768A5 /* AppDelegate+Estimote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4804C0FB1F916D27007768A5 /* AppDelegate+Estimote.swift */; };
+		489840EA1FB5DA67005EA05F /* Waypoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489840E91FB5DA67005EA05F /* Waypoint.swift */; };
 		48D1D5891FB5AD1F0045CA11 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 48D1D5881FB5AD1F0045CA11 /* Podfile */; };
 		48D1D58D1FB5B5690045CA11 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D1D58C1FB5B5690045CA11 /* MapViewController.swift */; };
 		48D1D58F1FB5B5800045CA11 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D1D58E1FB5B5800045CA11 /* MapViewModel.swift */; };
@@ -60,7 +61,8 @@
 		4804C0F61F915E19007768A5 /* ObjCBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCBridge.h; sourceTree = "<group>"; };
 		4804C0F91F916B80007768A5 /* EstimoteSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EstimoteSDK.framework; sourceTree = "<group>"; };
 		4804C0FB1F916D27007768A5 /* AppDelegate+Estimote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Estimote.swift"; sourceTree = "<group>"; };
-		48D1D5881FB5AD1F0045CA11 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
+		489840E91FB5DA67005EA05F /* Waypoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Waypoint.swift; path = Models/Waypoint.swift; sourceTree = "<group>"; };
+		48D1D5881FB5AD1F0045CA11 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		48D1D58C1FB5B5690045CA11 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = Features/Map/MapViewController.swift; sourceTree = "<group>"; };
 		48D1D58E1FB5B5800045CA11 /* MapViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewModel.swift; path = Features/Map/ViewModels/MapViewModel.swift; sourceTree = "<group>"; };
 		48D1D5901FB5B5E40045CA11 /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MapViewController.xib; path = Features/Map/MapViewController.xib; sourceTree = "<group>"; };
@@ -143,6 +145,14 @@
 			name = Estimote;
 			sourceTree = "<group>";
 		};
+		489840E81FB5DA53005EA05F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				489840E91FB5DA67005EA05F /* Waypoint.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		48D1D58A1FB5B5470045CA11 /* Map */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +201,7 @@
 				4804C0FB1F916D27007768A5 /* AppDelegate+Estimote.swift */,
 				48F642CB1F8E94B5002A225B /* AppCoordinator.swift */,
 				48F642B91F8E876D002A225B /* Features */,
+				489840E81FB5DA53005EA05F /* Models */,
 				48F642C61F8E93EF002A225B /* Coordinator */,
 				48F642D01F8EB6B9002A225B /* Utilities */,
 				48F642CD1F8EB21E002A225B /* Extensions */,
@@ -224,8 +235,8 @@
 		48F642B91F8E876D002A225B /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				48D1D58A1FB5B5470045CA11 /* Map */,
 				48F642BA1F8E8799002A225B /* Authentication */,
+				48D1D58A1FB5B5470045CA11 /* Map */,
 			);
 			name = Features;
 			sourceTree = "<group>";
@@ -464,13 +475,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PNPC-iOSTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5CE1E2088985DC2F44CBE541 /* [CP] Embed Pods Frameworks */ = {
@@ -494,9 +508,42 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PNPC-iOS/Pods-PNPC-iOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya-ObjectMapper/Moya_ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRealm/RxRealm.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRealmDataSources/RxRealmDataSources.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya_ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRealm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRealmDataSources.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -509,13 +556,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PNPC-iOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BCC3BEFDA50CCDE4D9DC2A18 /* [CP] Copy Pods Resources */ = {
@@ -569,13 +619,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PNPC-iOSUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -595,6 +648,7 @@
 				4804C0FC1F916D27007768A5 /* AppDelegate+Estimote.swift in Sources */,
 				48F642CA1F8E9442002A225B /* RootViewCoordinator.swift in Sources */,
 				48D1D5931FB5BA060045CA11 /* MapCoordinator.swift in Sources */,
+				489840EA1FB5DA67005EA05F /* Waypoint.swift in Sources */,
 				48F642D21F8EB6F5002A225B /* ValidationService.swift in Sources */,
 				48F6428C1F8E7BCD002A225B /* AppDelegate.swift in Sources */,
 				48D1D58F1FB5B5800045CA11 /* MapViewModel.swift in Sources */,
