@@ -34,7 +34,7 @@ public final class MapCoordinator: RootViewCoordinator {
         navigationController.isNavigationBarHidden = false
         
         navigationController.navigationBar.tintColor = UIColor.white
-        navigationController.navigationBar.barTintColor = UIColor.blue
+        navigationController.navigationBar.barTintColor = UIColor(red: 3/255, green: 122/255, blue: 98/255, alpha: 1)
         navigationController.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
         return navigationController
     }()

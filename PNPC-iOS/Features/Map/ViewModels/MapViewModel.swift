@@ -13,7 +13,7 @@ import Moya_ObjectMapper
 
 public final class MapViewModel {
     /// Annoatations from PNPC API
-    var annotations: Observable<[Waypoint]>
+    //var annotations: Observable<[Waypoint]>
     
     // Network Provider
     let provider = RxMoyaProvider<PNPCService>()
@@ -21,7 +21,8 @@ public final class MapViewModel {
     private let disposeBag = DisposeBag()
     
     public init() {
-        annotations = provider.request(.joke)
-            .mapArray(Waypoint.self)
+        //annotations = provider.request(.joke)
+        //            .mapArray(Waypoint.self)
+        //annotations = []
     }
 }

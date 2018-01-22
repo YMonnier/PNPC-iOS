@@ -11,6 +11,9 @@ import UIKit
 import RxCocoa
 import RxSwift
 
+import Moya
+import Moya_ObjectMapper
+
 public protocol AuthenticationControllerDelegate: class {
     func authenticationLoginIn()
 }
@@ -35,6 +38,8 @@ public final class AuthenticationViewController: UIViewController {
         super.viewDidLoad()
         self.loginButton.isEnabled = false
         addBindsTo(viewModel: viewModel)
+        nicknameField.text = "yseetraveller"
+        passwordField.text = ""
     }
     
     init(viewModel vm: AuthenticationModelView) {
@@ -78,14 +83,19 @@ public final class AuthenticationViewController: UIViewController {
         
         viewModel.response?.subscribe { event in
             print("Event: \(event)")
+            
             switch event {
             
             case .next(let response):
                 print("Response... \(response)")
-                self.delegate?.authenticationLoginIn()
-                /*if let jsonOpt = try? response.mapJSON() {
-                    print("JSON... \(jsonOpt)")
-                }*/
+                
+                if response.statusCode == 200 {
+                    if let jsonOpt = try? response.mapObject(User.self) {
+                        print("JSON... \(jsonOpt)")
+                        
+                        self.delegate?.authenticationLoginIn()
+                    }
+                }
                 break
             // do something with the data
             case .error(let error):

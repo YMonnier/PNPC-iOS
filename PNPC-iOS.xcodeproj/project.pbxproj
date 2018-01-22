@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4804C0FA1F916B80007768A5 /* EstimoteSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4804C0F91F916B80007768A5 /* EstimoteSDK.framework */; };
-		4804C0FC1F916D27007768A5 /* AppDelegate+Estimote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4804C0FB1F916D27007768A5 /* AppDelegate+Estimote.swift */; };
 		489840EA1FB5DA67005EA05F /* Waypoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489840E91FB5DA67005EA05F /* Waypoint.swift */; };
+		48C3C50A201657120071618F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C3C509201657120071618F /* User.swift */; };
+		48C3C50C201687440071618F /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C3C50B201687440071618F /* Settings.swift */; };
 		48D1D5891FB5AD1F0045CA11 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 48D1D5881FB5AD1F0045CA11 /* Podfile */; };
 		48D1D58D1FB5B5690045CA11 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D1D58C1FB5B5690045CA11 /* MapViewController.swift */; };
 		48D1D58F1FB5B5800045CA11 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D1D58E1FB5B5800045CA11 /* MapViewModel.swift */; };
@@ -60,8 +61,9 @@
 		44FBF5EABDC9765CF34BFB29 /* Pods-PNPC-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PNPC-iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PNPC-iOSTests/Pods-PNPC-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4804C0F61F915E19007768A5 /* ObjCBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCBridge.h; sourceTree = "<group>"; };
 		4804C0F91F916B80007768A5 /* EstimoteSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EstimoteSDK.framework; sourceTree = "<group>"; };
-		4804C0FB1F916D27007768A5 /* AppDelegate+Estimote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Estimote.swift"; sourceTree = "<group>"; };
 		489840E91FB5DA67005EA05F /* Waypoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Waypoint.swift; path = Models/Waypoint.swift; sourceTree = "<group>"; };
+		48C3C509201657120071618F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Models/User.swift; sourceTree = "<group>"; };
+		48C3C50B201687440071618F /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		48D1D5881FB5AD1F0045CA11 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		48D1D58C1FB5B5690045CA11 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = Features/Map/MapViewController.swift; sourceTree = "<group>"; };
 		48D1D58E1FB5B5800045CA11 /* MapViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewModel.swift; path = Features/Map/ViewModels/MapViewModel.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				489840E91FB5DA67005EA05F /* Waypoint.swift */,
+				48C3C509201657120071618F /* User.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -198,8 +201,8 @@
 			isa = PBXGroup;
 			children = (
 				48F6428B1F8E7BCD002A225B /* AppDelegate.swift */,
-				4804C0FB1F916D27007768A5 /* AppDelegate+Estimote.swift */,
 				48F642CB1F8E94B5002A225B /* AppCoordinator.swift */,
+				48C3C50B201687440071618F /* Settings.swift */,
 				48F642B91F8E876D002A225B /* Features */,
 				489840E81FB5DA53005EA05F /* Models */,
 				48F642C61F8E93EF002A225B /* Coordinator */,
@@ -644,9 +647,10 @@
 				48F642C01F8E8879002A225B /* AuthenticationViewModel.swift in Sources */,
 				48F642CF1F8EB238002A225B /* ViewExtension.swift in Sources */,
 				48F642BE1F8E8819002A225B /* AuthenticationViewController.swift in Sources */,
+				48C3C50A201657120071618F /* User.swift in Sources */,
 				48F642D51F8EB98A002A225B /* PNPCService.swift in Sources */,
-				4804C0FC1F916D27007768A5 /* AppDelegate+Estimote.swift in Sources */,
 				48F642CA1F8E9442002A225B /* RootViewCoordinator.swift in Sources */,
+				48C3C50C201687440071618F /* Settings.swift in Sources */,
 				48D1D5931FB5BA060045CA11 /* MapCoordinator.swift in Sources */,
 				489840EA1FB5DA67005EA05F /* Waypoint.swift in Sources */,
 				48F642D21F8EB6F5002A225B /* ValidationService.swift in Sources */,

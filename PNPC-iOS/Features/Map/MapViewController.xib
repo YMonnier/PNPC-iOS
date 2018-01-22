@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapViewController" customModule="PNPC_iOS" customModuleProvider="target">
             <connections>
+                <outlet property="mapView" destination="z1D-vW-Hn7" id="8nl-lF-UeV"/>
                 <outlet property="view" destination="iN0-l3-epB" id="1aC-ft-9PO"/>
             </connections>
         </placeholder>

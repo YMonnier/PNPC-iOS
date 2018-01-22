@@ -27,7 +27,7 @@ public final class AuthenticationModelView {
     let signupEnabled: Observable<Bool>
     
     /// Response HTTP
-    var response: Observable<Any>?
+    var response: Observable<Response>?
     
     // Network Provider
     let provider = RxMoyaProvider<PNPCService>()
@@ -52,12 +52,14 @@ public final class AuthenticationModelView {
         
         signupEnabled = Observable.combineLatest(validateNickname, validatePassword) { $0 && $1 }
         
+        let parameters = Observable.combineLatest(nickname, password)
         response = loginTap.asObservable()
-            .withLatestFrom(nickname)
-            .flatMap { (nn) in
+            .withLatestFrom(parameters)
+            .flatMap { (nn, pp) in
                 //self.provider.request(.login(nickname: nn))
-                self.provider.request(.joke)
-            }.mapJSON().shareReplay(1)
+                self.provider.request(.login(nickname: nn,
+                                             password: pp))
+            }.debug("loginTap.asObservable...").shareReplay(1)
         
         /*provider.request(.login(nickname: "zedzed")).subscribe { event in
             switch event {
