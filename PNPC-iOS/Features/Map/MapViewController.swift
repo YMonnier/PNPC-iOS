@@ -15,6 +15,7 @@ import RxCocoa
 import RxSwift
 
 import UserNotifications
+import NotificationBannerSwift
 
 public protocol MapViewControllerDelegate: class {
     func logout()
@@ -156,6 +157,8 @@ extension MapViewController: ESTMonitoringV2ManagerDelegate {
             identifier: "BeaconNotification", content: content, trigger: trigger)
         let center = UNUserNotificationCenter.current()
         center.add(request, withCompletionHandler: nil)
+        
+        NotificationBanner(title: title, subtitle: body, style: .success).show()
     }
 }
 

@@ -28,6 +28,8 @@ target 'PNPC-iOS' do
   # Firebase Cloud Messaging
   pod 'Firebase/Core'
   pod 'Firebase/Messaging'
+  
+  pod 'NotificationBannerSwift', '1.3'
 
   # Estimote SDK
   # Does not work (https://github.com/Estimote/iOS-SDK/issues/269)
