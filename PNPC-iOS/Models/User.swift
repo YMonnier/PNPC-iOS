@@ -8,21 +8,21 @@
 
 import ObjectMapper
 
-struct User: Mappable {
+public struct User: Mappable {
     var id: Int
     var nickname: String
     var authToken: String
     var email: String
     
     // MARK: JSON
-    init?(map: Map) {
+    public init?(map: Map) {
         id = -1
         email = ""
         nickname = ""
         authToken = ""
     }
     
-    mutating func mapping(map: Map) {
+    mutating public func mapping(map: Map) {
         id <- map["id"]
         email <- map["email"]
         nickname <- map["nickname"]

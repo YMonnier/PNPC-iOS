@@ -13,7 +13,7 @@ enum PNPCService {
     case passage(userID: Int, beaconID: String)
 }
 
-extension PNPCService: TargetType {
+extension PNPCService: TargetType, AccessTokenAuthorizable {
     var baseURL: URL { return URL(string: "https://cloud-lsis-3.lsis.univ-tln.fr/PNPC/api")! }
     var path: String {
         switch self {
@@ -55,8 +55,17 @@ extension PNPCService: TargetType {
         return Data()
     }
     
-    var headers: [String: String]? {
+    /// Declares whether or not `AccessTokenPlugin` should add an authorization header
+    /// to requests.
+    var shouldAuthorize: Bool {
+        switch self {
+        case .passage: return true
+        case .login: return false
+        }
+    }
+    
+    var headers: [String: String] {
         return ["Content-type": "application/json",
-                "Authorization": Settings.authToken]
+                "Authorization": Settings.user?.authToken ?? ""]
     }
 }

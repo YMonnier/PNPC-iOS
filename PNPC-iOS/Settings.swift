@@ -9,5 +9,5 @@
 import Foundation
 
 public struct Settings {
-    public static var authToken = ""
+    public static var user: User?
 }

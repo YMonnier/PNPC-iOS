@@ -90,9 +90,9 @@ public final class AuthenticationViewController: UIViewController {
                 print("Response... \(response)")
                 
                 if response.statusCode == 200 {
-                    if let jsonOpt = try? response.mapObject(User.self) {
-                        print("JSON... \(jsonOpt)")
-                        
+                    if let user = try? response.mapObject(User.self) {
+                        print("user... \(user)")
+                        Settings.user = user
                         self.delegate?.authenticationLoginIn()
                     }
                 }
